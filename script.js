@@ -122,7 +122,7 @@ const renderJogos = async () => {
 
 const verificaResultado = () => {
 
-    let resultado = [6,9,19,21,23,32,34,36,45,49,62,65,66,67,86,88,89,91,92,95]
+    let resultado = [6,9,19,21,23,32,34,36,45,49,62,65,66,67,86,88,89,91,92,95,99]
 
     // numeros.forEach((num, key)=> {
 
