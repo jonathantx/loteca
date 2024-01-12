@@ -1,6 +1,6 @@
 <?php
 
-require_once '../db/connection.php';
+require_once '../app/db/connection.php';
 require_once '../app/functions.php';
 
 header('Content-Type: application/json');

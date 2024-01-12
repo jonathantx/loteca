@@ -1,17 +1,39 @@
 <?php
 
-require_once '../db/connection.php';
+require_once '../app/db/connection.php';
 require_once '../app/functions.php';
 
-$id = $_GET['id'];
+header('Content-Type: application/json');
 
-$sql = "SELECT * FROM jogos_numeros ORDER BY numero ASC";
+$sql = "SELECT id FROM jogos ORDER BY id ASC";
 
 $query = $conn->query($sql);
 
-$numeros = $query->fetchAll(PDO::FETCH_OBJ);
+$jogos = $query->fetchAll(PDO::FETCH_OBJ);
+
+foreach ($jogos as $key => $jogo) {
+
+    $numbers = [];
+
+    $sql = "SELECT numero FROM jogos_numeros WHERE jogo_id = $jogo->id ORDER BY numero ASC";
+
+    $query = $conn->query($sql);
+
+    $numeros = $query->fetchAll(PDO::FETCH_OBJ);
+
+    foreach ($numeros as $k => $num) {
+        
+        $numbers[] = $num->numero;
+        
+    }
+
+    $jogos[$key] = [
+        'id_jogo'  => $jogo->id,
+        'numerais' => $numbers,
+    ];
+}
 
 response([
     'status' => true,
-    'data' => $numeros
+    'data' => $jogos
 ]);

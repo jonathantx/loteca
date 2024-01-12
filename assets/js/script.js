@@ -33,21 +33,11 @@ const renderNumeros = () => {
         if(e.num === 0)
             e.num = '00'
 
-        let isSelected = false
+        let isSelected = e.selected ? 'bg-warning' : ''
 
-        if(e.selected)
-            isSelected = 'bg-success'
-        else 
-            isSelected = ''
+        let isPremiado = e.premiado ? 'style="background-color: #38c138 !important; border: 1px solid #38c138 !important;"' : ''
 
-        let isPremiado = false
-
-        if(e.premiado)
-            isPremiado = 'bg-warning'
-        else
-            isPremiado = ''
-
-        html += `<p class="m-0 number ${isSelected} ${isPremiado}" data-id="${e.num}">${e.num}</p>`
+        html += `<p class="m-0 number ${isSelected}" ${isPremiado} data-id="${e.num}">${e.num}</p>`
 
     })
 

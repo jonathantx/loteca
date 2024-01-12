@@ -7,14 +7,14 @@
 
 .numeros-container {
     display: grid;
-    grid-template-columns: repeat(7, 60px) !important;
+    grid-template-columns: repeat(12, 60px) !important;
     gap: 5px;
     justify-content: center;
     padding: 1rem;
     font-size: 18px;
     font-weight: 500;
     row-gap: 1rem;
-    width: 500px;
+    width: 850px;
     padding: 2rem;
     background: #f2f1f1;
     border-radius: 14px;
@@ -22,7 +22,7 @@
 
 .numeros-container p {
     padding: 10px 10px;
-    border: 1px solid #24c024;
+    border: 1px solid #ffc107;
     border-radius: 61%;
     width: 60px;
     min-width: 60px;
@@ -36,8 +36,4 @@
     background-color: #6262f3!important;
     color: white !important;
     border: 1px solid white !important;
-}
-
-.bg-success {
-    background-color: #24c024;
 }
