@@ -17,11 +17,14 @@
     <div class="container">
         <h1 class="text-center mt-5">Conferir Jogos - Lotomania</h1>
         <div class="row mt-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <button class="btn btn-md btn-primary">Meus Jogos</button>
-                <button class="btn btn-md btn-success">Resultado</button>
+                <button class="btn btn-md btn-success btn-gerar-resultado">Resultado</button>
             </div>
-            <div class="col-md-6 text-end">
+            <div class="col text-end">
+                <h3 class="text-center acertos"></h3>
+            </div>
+            <div class="col-md-3 text-end">
                 <button class="btn btn-md btn-dark" id="btn-save-game">Salvar Jogo</button>
             </div>
         </div>

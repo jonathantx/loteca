@@ -7,8 +7,8 @@
 
 .numeros-container {
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    place-items: center;
+    grid-template-columns: repeat(7, 60px) !important;
+    gap: 5px;
     justify-content: center;
     padding: 1rem;
     font-size: 18px;
@@ -39,5 +39,5 @@
 }
 
 .bg-success {
-    background-color: #24c024 !important;
+    background-color: #24c024;
 }

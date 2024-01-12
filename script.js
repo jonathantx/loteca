@@ -116,33 +116,21 @@ const renderJogos = async () => {
         })
     })
 
-    // renderNumeros()
     verificaResultado()
 }
 
 const verificaResultado = () => {
 
-    let resultado = [6,9,19,21,23,32,34,36,45,49,62,65,66,67,86,88,89,91,92,95,99]
-
-    // numeros.forEach((num, key)=> {
-
-    //     resultado.forEach((e, key) => {
-    //         if(num.num == e)
-    //             num.premiado = true
-    //     })
-
-    // })
+    let resultado = [6,9,19,21,23,32,34,36,45,49,62,65,66,67,86,88,89,91,92,95]
 
     numeros.forEach((num, key)=> {
 
         resultado.forEach((e, key) => {
 
-            if(num.num === e){
+            if(num.num === e && num.selected === true){
                 num.premiado = true
                 return
             }
-
-
         })
 
     })
@@ -151,7 +139,7 @@ const verificaResultado = () => {
         return count + (num.premiado === true ? 1 : 0);
     }, 0);
 
-    console.log(countAcertos, 'acertos');
+    $('.acertos').html(countAcertos + ' acertos');
 
     renderNumeros()
 
@@ -177,6 +165,8 @@ $(document).on('click', '.bg-success', function() {
     renderNumeros()
 
 })
+
+$('.btn-gerar-resultado').click(renderJogos)
 
 $('#btn-save-game').click(saveGame)
 
