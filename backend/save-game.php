@@ -15,7 +15,8 @@ $countNumbers = array_reduce($numbers, function ($acc, $b) {
         return $acc;
 }, 0);
 
-if($countNumbers < 1){
+
+if($countNumbers < 50){
     response([
         'status' => false,
         'message' => 'Você deve selecionar no mínimo 50 números!' 
@@ -35,16 +36,14 @@ $jogo_id = $conn->lastInsertId();
 foreach ($numbers as $key => $number) {
 
     $number = (Object) $number;
-    
-    if($number->selected == 'true'){
 
-        $sql = "INSERT INTO jogos_numeros (numero, jogo_id) VALUES ($number->num, $jogo_id)";
+    $selected = $number->selected == 'true' ? 1 : 0;
 
-        $query = $conn->prepare($sql);
+    $sql = "INSERT INTO jogos_numeros (numero, jogo_id, selected) VALUES ($number->num, $jogo_id, $selected)";
 
-        $data = $query->execute();
+    $query = $conn->prepare($sql);
 
-    }
+    $data = $query->execute();
 
 }
 

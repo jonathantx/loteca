@@ -14,6 +14,9 @@ const gerarNumeros = () => {
             selected: false,
             premiado: false,
         })
+
+        // if(i >= 50)
+        //     numeros[i].selected = true
     }
 
     renderNumeros()
@@ -80,11 +83,20 @@ const saveGame = async () => {
 
     if(!response.status)
         return alert(response.message)
-}
+    // else 
+    //     alert(response.message).then(() => {
+            
+    //     })
+
+        window.location.href = '/meus-jogos'
+
+    
+
+}   
 
 const renderJogos = async () => {
 
-    const url = `/backend/get-game.php`
+    const url = `/backend/get-game-.php`
 
     let jogo_id = 1
 
