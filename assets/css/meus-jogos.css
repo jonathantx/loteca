@@ -20,7 +20,7 @@
     text-align: center;
 }
 
-.numeros-container {
+.numbers-container {
     display: grid;
     grid-template-columns: repeat(9, 1fr) !important;
     width: 100%;
@@ -28,6 +28,17 @@
     font-weight: 500;
     row-gap: 1rem;
     /* padding: 1rem; */
+}
+
+.numbers-container p {
+    padding: 10px 10px;
+    border: 1px solid #ffc107;
+    border-radius: 61%;
+    width: 60px;
+    min-width: 60px;
+    max-height: 60px;
+    min-height: 55px;
+    text-align: center;
 }
 
 .jogos-container p {

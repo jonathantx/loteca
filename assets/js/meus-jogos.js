@@ -55,7 +55,7 @@ const renderJogos = (data) => {
         <div class="jogos-container">
             <h4 class="m-0">Concurso: ${e.concurso}</h4>
             <h4 class="m-0">${countAcertos} Acertos</h4>
-            <div class="numeros-container">
+            <div class="numbers-container">
                 ${numerosHtml}
             </div>
         </div>
