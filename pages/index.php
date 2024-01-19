@@ -1,5 +1,8 @@
 <?php require_once '../pages/head.php' ?>
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
 <body>
+    <?php require_once '../pages/header.php' ?>
     <div class="container">
         <div class="row mt-3">
             <div class="col text-end">
