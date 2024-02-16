@@ -1,6 +1,6 @@
 <?php
 
-$url = "https://loteriascaixa-api.herokuapp.com/api/lotomania/latest";
+$url = "https://loteriascaixa-api.herokuapp.com/api/lotofacil/latest";
 
 $curl = curl_init($url);
 

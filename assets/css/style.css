@@ -5,16 +5,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.container-jogos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
 .numeros-container {
     display: grid;
-    grid-template-columns: repeat(12, 60px) !important;
+    grid-template-columns: repeat(4, 60px) !important;
     gap: 5px;
     justify-content: center;
     padding: 1rem;
     font-size: 18px !important;
     font-weight: 500;
     row-gap: 1rem;
-    width: 850px;
+    width: 30%;
     padding: 2rem;
     background: #f2f1f1;
     border-radius: 14px;

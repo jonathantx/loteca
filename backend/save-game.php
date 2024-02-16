@@ -16,12 +16,12 @@ $countNumbers = array_reduce($numbers, function ($acc, $b) {
 }, 0);
 
 
-if($countNumbers < 50){
-    response([
-        'status' => false,
-        'message' => 'Você deve selecionar no mínimo 50 números!' 
-    ]);
-}
+// if($countNumbers < 50){
+//     response([
+//         'status' => false,
+//         'message' => 'Você deve selecionar no mínimo 50 números!' 
+//     ]);
+// }
 
 // Insere o jogo
 

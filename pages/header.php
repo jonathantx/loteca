@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
-    <a class="navbar-brand" href="/">Lotomania</a>
+    <a class="navbar-brand" href="/"><img src="./app/assets/logo.png" alt="" class="img-logo" style="width: 100%; height: 100px; object-fit:cover;"></a>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">

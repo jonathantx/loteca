@@ -8,7 +8,7 @@ var countAcertos = 0
 
 const gerarNumeros = () => {
 
-    for (let i = 0; i <= 99; i++) {
+    for (let i = 1; i <= 25; i++) {
         numeros.push({
             num: i,
             selected: false,
@@ -58,8 +58,8 @@ const addNumbers = ({target}) => {
         return count + (num.selected === true ? 1 : 0);
     }, 0);
 
-    if(countSelecteds == 50)
-        return alert('Você já selecionou 50 números!')
+    if(countSelecteds > 15)
+        return alert('Você já selecionou 15 números!')
 
     numeros.forEach((e, key) => {
 

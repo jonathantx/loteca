@@ -31,6 +31,7 @@ const renderJogos = (data) => {
     data.forEach((e, key) => {
 
         $('.resultado').html('Resultado: ' + e.data)
+        $('.concurso').html('Concurso: ' + e.concurso)
  
         let numerosHtml = ''
 
@@ -53,7 +54,6 @@ const renderJogos = (data) => {
 
         html += `
         <div class="jogos-container">
-            <h4 class="m-0">Concurso: ${e.concurso}</h4>
             <h4 class="m-0">${countAcertos} Acertos</h4>
             <div class="numbers-container">
                 ${numerosHtml}
